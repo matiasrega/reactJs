@@ -14,26 +14,26 @@
   align-items: center;
 }
 
-.NavBar ul li {
+.link {
   align-content: center;
 }
 
-.NavBar ul li:hover {
+.link:hover {
   opacity: 50%;
 }
 
-.NavBar ul li a {
-  text-decoration: none;
-  box-shadow: none;
+.link div {
+  text-decoration: none !important;
 }
 
-.NavBar ul li p {
+.link div p {
   color: black;
   margin: 0 auto;
   padding: 0px;
+  text-decoration: none !important;
 }
 
-.NavBar ul li img {
+.link img {
   margin: 0 auto;
   padding: 0px;
   width: 100%;

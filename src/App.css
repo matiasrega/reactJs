@@ -3,13 +3,6 @@
   box-sizing: border-box;
 }
 
-.body {
-  background-image: url("./fondo\ fungi\ -\ opaco.jpg");
-  width: 100vw;
-  height: 100vh;
-  justify-items: center;
-}
-
 .itemListContainer {
   display: flex;
   justify-content: space-around;

@@ -1,51 +1,37 @@
 import React from "react";
 import "./NavBar.css";
 import hongosPage from "./hongosPage.svg";
-import investigacionPage from "./investigacionPage.svg";
 import productosPage from "./productosPage.svg";
 import contactoPage from "./ContactoPage.svg";
 import triquetaLogo from "./triquetaLogo.png";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="NavBar">
-      <div className="logo">
+      <Link className="logo" to={"/"}>
         <img src={triquetaLogo} alt="triquetaLogo" />
-      </div>
+      </Link>
       <ul>
-        <li>
-          <a href="https://triquetafungi.000webhostapp.com/page/hongos.html">
-            <div>
-              <img src={hongosPage} alt="hongosPage" />
-              <p>Hongos</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="https://triquetafungi.000webhostapp.com/page/investigacionesyposiblesaplicaciones.html">
-            <div>
-              <img src={investigacionPage} alt="investacionPage" />
-              <p>Investigación</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="https://triquetafungi.000webhostapp.com/page/hongos.html">
-            <div>
-              <img src={productosPage} alt="productosPage" />
-              <p>Productos</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="https://triquetafungi.000webhostapp.com/page/contactateconnosotros.html">
-            <div>
-              <img src={contactoPage} alt="contactoPage" />
-              <p>Contacto</p>
-            </div>
-          </a>
-        </li>
+        <Link className="link" to={"/item/:id"}>
+          <div>
+            <img src={hongosPage} alt="ComestiblesPage" />
+            <p>Comestibles</p>
+          </div>
+        </Link>
+        <Link className="link" to={"/item/:id"}>
+          <div>
+            <img src={productosPage} alt="productosPage" />
+            <p>Productos Elaborados</p>
+          </div>
+        </Link>
+        <Link className="link" to={"/Contacto"}>
+          <div>
+            <img src={contactoPage} alt="contactoPage" />
+            <p>Contacto</p>
+          </div>
+        </Link>
       </ul>
       <div className="ShopNavBar">
         <CartWidget />
