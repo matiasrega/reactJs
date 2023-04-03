@@ -2,7 +2,6 @@ import React from "react";
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 import "../Pages/Background.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const ProductosPorCategoria = () => {

@@ -27,11 +27,7 @@ const ItemListContainer = () => {
       {productos.map((productos) => {
         return (
           <Link className="ItemLink" to={`/Item/${productos.id}`}>
-            {isLoading ? (
-              <Spinner />
-            ) : (
-              <Item data={productos} key={productos.id} />
-            )}
+            {isLoading ? <Spinner /> : <Item data={productos} key={null} />}
           </Link>
         );
       })}
