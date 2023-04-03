@@ -12,17 +12,17 @@ const Footer = () => {
       </div>
       <div className="ItemDer">
         <p>
-          <a href="www.facebook.com" target={"_blank"}>
+          <a href="www.facebook.com" target="_blank" rel="noreferrer">
             <img src={FbImg} alt="Facebook"></img>
           </a>
         </p>
         <p>
-          <a href="www.whatsapp.com" target={"_blank"}>
+          <a href="www.whatsapp.com" target="_blank" rel="noreferrer">
             <img src={WspImg} alt="Whatsapp"></img>
           </a>
         </p>
         <p>
-          <a href="www.pinterest.com" target={"_blank"}>
+          <a href="www.pinterest.com" target="_blank" rel="noreferrer">
             <img src={PintImg} alt="Pinterest"></img>
           </a>
         </p>

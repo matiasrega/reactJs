@@ -11,6 +11,7 @@ import Contacto from "./Pages/Contacto";
 import Home from "./Pages/Home";
 import ItemDetail from "./Pages/ItemDetail";
 import Error from "./Pages/Error";
+import ProductosPorCategoria from "./Pages/ProductosPorCategoria";
 
 class App extends Component {
   render() {
@@ -21,12 +22,15 @@ class App extends Component {
           <Routes>
             <Route path="/Contacto" element={<Contacto />}></Route>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/category/:id" element={<Home />}></Route>
+            <Route
+              path="/category/:id"
+              element={<ProductosPorCategoria />}
+            ></Route>
             <Route path="/item/:id" element={<ItemDetail />}></Route>
-            <Route path="/*" element={<Error />}></Route>
+            <Route path="*" element={<Error />}></Route>
           </Routes>
+          <Footer />
         </div>
-        <Footer />
       </Router>
     );
   }

@@ -33,6 +33,7 @@ const Item = ({ data }) => {
           color="text.secondary"
           sx={{ p: "0" }}
         ></Typography>
+        {data.category}
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-around" }}>
         <Button size="large" variant="contained">
