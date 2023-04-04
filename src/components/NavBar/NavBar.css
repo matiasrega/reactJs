@@ -16,6 +16,7 @@
 
 .link {
   align-content: center;
+  text-decoration: none;
 }
 
 .link:hover {

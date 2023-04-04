@@ -7,10 +7,11 @@ import {
   Button,
   Typography,
 } from "@mui/material/";
+import "./Item.css";
 
 const Item = ({ data }) => {
   return (
-    <Card sx={{ width: 250 }}>
+    <Card className="itemCard" sx={{ width: 250 }}>
       <CardMedia
         component="img"
         alt={data.title}
@@ -39,11 +40,7 @@ const Item = ({ data }) => {
         <Button size="large" variant="contained">
           Comprar
         </Button>
-        <Button
-          size="small"
-          variant="contained"
-          sx={{ textDecoration: "none", p: "0" }}
-        >
+        <Button size="small" variant="contained" sx={{ p: "0" }}>
           + Info
         </Button>
       </CardActions>

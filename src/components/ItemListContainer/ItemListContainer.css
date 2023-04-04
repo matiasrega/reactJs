@@ -14,3 +14,7 @@
   opacity: 80%;
   width: 99%;
 }
+
+.ItemLink {
+  text-decoration: none;
+}
