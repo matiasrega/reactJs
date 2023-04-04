@@ -5,7 +5,8 @@ import productosPage from "./productosPage.svg";
 import contactoPage from "./ContactoPage.svg";
 import triquetaLogo from "./triquetaLogo.png";
 import CartWidget from "../CartWidget/CartWidget";
-import inicioPage from "./investigacionPage.svg";
+import inicioPage from "./inicioPage.svg";
+import investigacionPage from "./investigacionPage.svg";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -23,16 +24,22 @@ const NavBar = () => {
             </div>
           </Link>
         </div>
-        <Link className="link" to={"/category/:id"}>
+        <Link className="link" to={"/category/alcoholaturas"}>
           <div>
-            <img src={hongosPage} alt="ComestiblesPage" />
-            <p>Comestibles</p>
+            <img src={hongosPage} alt="AlcoholaturaPage" />
+            <p>Alcoholaturas</p>
           </div>
         </Link>
-        <Link className="link" to={"/category/:id"}>
+        <Link className="link" to={"/category/comestibles"}>
           <div>
-            <img src={productosPage} alt="productosPage" />
-            <p>Productos Elaborados</p>
+            <img src={productosPage} alt="ComestiblesPage" />
+            <p>Setas Comestibles</p>
+          </div>
+        </Link>
+        <Link className="link" to={"/category/propagaciones"}>
+          <div>
+            <img src={investigacionPage} alt="PropagacionPage" />
+            <p>Propagación</p>
           </div>
         </Link>
         <Link className="link" to={"/Contacto"}>

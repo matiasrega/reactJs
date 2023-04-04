@@ -1,16 +1,16 @@
 import * as React from "react";
-import Item from "../items/Item";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import "./ItemListContainer.css";
 import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
 import { useParams } from "react-router-dom";
+import getProduct from "../../ApiFake/data";
+import ItemList from "../ItemList/ItemList";
 
 //https://fakestoreapi.com/products
 
 const ItemListContainer = () => {
-  const [productos, setProductos] = useState([]);
+  const [listaProductos, setListaProductos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   const { id } = useParams;
@@ -18,13 +18,17 @@ const ItemListContainer = () => {
   useEffect(() => {
     setIsLoading(true);
 
-    axios("https://fakestoreapi.com/products").then((res) => {
-      if (id) {
-        setProductos(res.filter((productos) => productos.category === id));
-      } else {
-        setProductos(res.data);
-      }
-    });
+    getProduct()
+      .then((res) => {
+        if (id) {
+          setListaProductos(
+            res.filter((productos) => productos.category === id)
+          );
+        } else {
+          setListaProductos(res);
+        }
+      })
+      .catch((error) => console.log(error));
 
     setTimeout(() => {
       setIsLoading(false);
@@ -33,13 +37,13 @@ const ItemListContainer = () => {
 
   return (
     <div className="ItemList">
-      {productos.map((productos) => {
+      {listaProductos.map((productos) => {
         return (
           <Link className="ItemLink" to={`/Item/${productos.id}`}>
             {isLoading ? (
               <Spinner />
             ) : (
-              <Item data={productos} key={productos.id} />
+              <ItemList listaProductos={listaProductos} />
             )}
           </Link>
         );

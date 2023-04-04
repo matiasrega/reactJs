@@ -9,13 +9,24 @@ import {
 } from "@mui/material/";
 import "./Item.css";
 
-const Item = ({ data }) => {
+const Item = ({ producto }) => {
+  const {
+    id,
+    nombre,
+    tipoDeProducto,
+    category,
+    presentacion,
+    importe,
+    imagen,
+    descripcion,
+  } = producto;
+
   return (
     <Card className="itemCard" sx={{ width: 250 }}>
       <CardMedia
         component="img"
-        alt={data.title}
-        image={data.image}
+        alt={nombre}
+        image={imagen}
         height={"max-content"}
         width={"250"}
       />
@@ -27,14 +38,14 @@ const Item = ({ data }) => {
           width={"200px"}
           sx={{ textAlign: "justify", m: "0", p: "0" }}
         >
-          {data.title}
+          {producto.presentacion}
         </Typography>
         <Typography
           variant="body2"
           color="text.secondary"
           sx={{ p: "0" }}
         ></Typography>
-        {data.category}
+        {category}
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-around" }}>
         <Button size="large" variant="contained">
