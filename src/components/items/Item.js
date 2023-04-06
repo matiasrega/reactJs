@@ -8,18 +8,13 @@ import {
   Typography,
 } from "@mui/material/";
 import "./Item.css";
+import { useNavigate } from "react-router-dom";
 
 const Item = ({ producto }) => {
-  const {
-    id,
-    nombre,
-    tipoDeProducto,
-    category,
-    presentacion,
-    importe,
-    imagen,
-    descripcion,
-  } = producto;
+  const navegar = useNavigate();
+
+  const { id, nombre, tipoDeProducto, presentacion, importe, imagen } =
+    producto;
 
   return (
     <Card className="itemCard" sx={{ width: 250 }}>
@@ -35,23 +30,45 @@ const Item = ({ producto }) => {
           gutterBottom
           variant="h10"
           component="div"
-          width={"200px"}
-          sx={{ textAlign: "justify", m: "0", p: "0" }}
+          width={"fit-content"}
+          sx={{
+            m: "0",
+            textTransform: "uppercase",
+            p: "0",
+            textAlign: "center",
+          }}
         >
-          {producto.presentacion}
+          {tipoDeProducto} de {nombre}
         </Typography>
         <Typography
           variant="body2"
           color="text.secondary"
-          sx={{ p: "0" }}
-        ></Typography>
-        {category}
+          sx={{ p: "5", m: "10" }}
+        >
+          {" "}
+          Presentación: {presentacion}
+        </Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          sx={{ pt: "5", m: "10" }}
+        >
+          {" "}
+          Precio: ${importe}
+        </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-around" }}>
         <Button size="large" variant="contained">
           Comprar
         </Button>
-        <Button size="small" variant="contained" sx={{ p: "0" }}>
+        <Button
+          size="small"
+          variant="contained"
+          sx={{ p: "0" }}
+          onClick={() => {
+            navegar(`/item/${id}`);
+          }}
+        >
           + Info
         </Button>
       </CardActions>

@@ -36,7 +36,7 @@ const NavBar = () => {
             <p>Setas Comestibles</p>
           </div>
         </Link>
-        <Link className="link" to={"/category/propagaciones"}>
+        <Link className="link" to={"/category/propagacion"}>
           <div>
             <img src={investigacionPage} alt="PropagacionPage" />
             <p>Propagación</p>

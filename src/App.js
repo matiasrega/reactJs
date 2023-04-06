@@ -8,10 +8,9 @@ import Footer from "./components/Footer/Footer";
 
 //Import Router-dom
 import Contacto from "./Pages/Contacto";
-import Home from "./Pages/Home";
-import ItemDetail from "./Pages/ItemDetail";
 import Error from "./Pages/Error";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 class App extends Component {
   render() {
@@ -21,9 +20,9 @@ class App extends Component {
           <NavBar />
           <Routes>
             <Route path="/Contacto" element={<Contacto />}></Route>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={<ItemListContainer />}></Route>
             <Route path="/category/:id" element={<ItemListContainer />}></Route>
-            <Route path="/item/:id" element={<ItemDetail />}></Route>
+            <Route path="/item/:id" element={<ItemDetailContainer />}></Route>
             <Route path="*" element={<Error />}></Route>
           </Routes>
           <Footer />

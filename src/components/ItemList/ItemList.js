@@ -1,16 +1,10 @@
 import React from "react";
 import Item from "../items/Item";
+import "./ItemList.css";
 
 const ItemList = ({ listaProductos }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        flexWrap: "wrap",
-      }}
-    >
+    <div className="bodyItemList">
       {listaProductos.map((producto) => (
         <Item key={producto.id} producto={producto} />
       ))}

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import "./ItemListContainer.css";
-import { Link } from "react-router-dom";
 import Spinner from "../Spinner/Spinner";
 import { useParams } from "react-router-dom";
 import getProduct from "../../ApiFake/data";
@@ -36,6 +35,16 @@ const ItemListContainer = () => {
   }, [id]);
 
   return (
+    <div>
+      {" "}
+      {isLoading ? <Spinner /> : <ItemList listaProductos={listaProductos} />}
+    </div>
+  );
+};
+
+export default ItemListContainer;
+
+/*return (
     <div className="ItemList">
       {listaProductos.map((productos) => {
         return (
@@ -43,13 +52,11 @@ const ItemListContainer = () => {
             {isLoading ? (
               <Spinner />
             ) : (
-              <ItemList listaProductos={listaProductos} />
+              <ItemList listaProductos={listaProductos} key={productos.id} />
             )}
           </Link>
         );
       })}
     </div>
   );
-};
-
-export default ItemListContainer;
+};*/
