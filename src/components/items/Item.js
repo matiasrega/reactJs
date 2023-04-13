@@ -9,9 +9,18 @@ import {
 } from "@mui/material/";
 import "./Item.css";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../CartContext/CartContext";
 
 const Item = ({ producto }) => {
+  const { addToCart } = useCart();
+
   const navegar = useNavigate();
+
+  const manejarCompra = (e) => {
+    addToCart(producto);
+    navegar("/cart");
+    console.log(e.target.data);
+  };
 
   const { id, nombre, tipoDeProducto, presentacion, importe, imagen } =
     producto;
@@ -58,7 +67,7 @@ const Item = ({ producto }) => {
         </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-around" }}>
-        <Button size="large" variant="contained">
+        <Button onClick={manejarCompra} size="large" variant="contained">
           Comprar
         </Button>
         <Button

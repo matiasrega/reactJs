@@ -1,4 +1,7 @@
 .ItemDetail {
   display: flex;
   justify-content: center;
+  margin: 25px 0px 25px 30px;
+  padding-bottom: 25px;
+  background-image: url("./fondo\ fungi\ -\ opaco.jpg");
 }

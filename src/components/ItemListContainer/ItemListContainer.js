@@ -6,13 +6,11 @@ import { useParams } from "react-router-dom";
 import getProduct from "../../ApiFake/data";
 import ItemList from "../ItemList/ItemList";
 
-//https://fakestoreapi.com/products
-
 const ItemListContainer = () => {
   const [listaProductos, setListaProductos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { id } = useParams;
+  const { id } = useParams();
 
   useEffect(() => {
     setIsLoading(true);
@@ -43,20 +41,3 @@ const ItemListContainer = () => {
 };
 
 export default ItemListContainer;
-
-/*return (
-    <div className="ItemList">
-      {listaProductos.map((productos) => {
-        return (
-          <Link className="ItemLink" to={`/Item/${productos.id}`}>
-            {isLoading ? (
-              <Spinner />
-            ) : (
-              <ItemList listaProductos={listaProductos} key={productos.id} />
-            )}
-          </Link>
-        );
-      })}
-    </div>
-  );
-};*/

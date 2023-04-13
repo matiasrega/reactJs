@@ -1,24 +1,24 @@
 import React from "react";
 import "./ItemDetailContainer.css";
 import { useEffect, useState } from "react";
-import axios from "axios";
-import Item from "../items/Item";
 import { useParams } from "react-router-dom";
+import getProduct from "../../ApiFake/data";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
-  const [ItemDetail, SetItemDetail] = useState({});
+  const [itemDetail, SetItemDetail] = useState({});
 
   let { id } = useParams();
 
   useEffect(() => {
-    axios(`https://fakestoreapi.com/products/${id}`).then((res) =>
-      SetItemDetail(res.data)
-    );
+    getProduct()
+      .then((res) => SetItemDetail(res.find((item) => item.id === id)))
+      .catch((error) => console.log(error));
   }, [id]);
 
   return (
     <div className="ItemDetail">
-      <Item data={ItemDetail} />
+      <ItemDetail detalleProducto={itemDetail} />
     </div>
   );
 };
