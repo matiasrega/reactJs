@@ -51,7 +51,6 @@ const NavBar = () => {
       </ul>
       <div className="ShopNavBar">
         <CartWidget />
-        <p>10</p>
       </div>
     </div>
   );
