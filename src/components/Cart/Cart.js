@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useCart } from "../CartContext/CartContext";
 
 const Cart = () => {
-  const { cartItems } = useCart();
+  const { cartItems, updateCartItems } = useCart();
   const [items, setItems] = useState(
     JSON.parse(localStorage.getItem("cartItems")) || cartItems
   );
@@ -11,6 +11,7 @@ const Cart = () => {
   const handleEmptyCart = () => {
     setItems([]);
     localStorage.setItem("cartItems", JSON.stringify([]));
+    updateCartItems([]);
   };
 
   return (
