@@ -10,9 +10,17 @@ import {
 } from "@mui/material";
 import "./ItemDetail.css";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../CartContext/CartContext";
 
 const ItemDetail = ({ detalleProducto }) => {
   const navegar = useNavigate();
+  const { addToCart } = useCart();
+
+  const manejarCompra = (e) => {
+    addToCart(detalleProducto);
+    navegar("/cart");
+    console.log(e.target.data);
+  };
 
   return (
     <Card className="CardItemDetail" sx={{ maxWidth: 500 }}>
@@ -59,7 +67,7 @@ const ItemDetail = ({ detalleProducto }) => {
           variant="contained"
           sx={{ margin: "0 auto", p: "15px" }}
           onClick={() => {
-            navegar(`/cart`);
+            manejarCompra();
           }}
         >
           Agregar al carrito

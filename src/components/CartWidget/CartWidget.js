@@ -5,13 +5,20 @@ import { Link } from "react-router-dom";
 
 const CartWidget = () => {
   const { cartItems } = useCart();
-  const hasProducts = cartItems.length > 0;
+  const hayProductos = cartItems.length > 0;
   return (
     <div className="CartWidget">
-      {hasProducts && (
+      {hayProductos && (
         <>
           {" "}
-          <Link to={"/cart"} style={{ textDecoration: "none" }}>
+          <Link
+            to={"/cart"}
+            style={{
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <ShoppingCartCheckoutRoundedIcon
               sx={{ width: 50, heigth: 500, fontSize: "50px" }}
             />

@@ -1,2 +1,99 @@
+h1 {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
 
+.cart-item {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  border: 1px solid grey;
+  width: 60vw;
+}
 
+.cart-item img {
+  width: 200px;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.cartItemInfo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cartIteName {
+  width: 100%;
+  font-weight: bold;
+}
+
+.cartItemPrice {
+  color: black;
+}
+
+.btnItemRmv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 15px;
+  align-self: center;
+}
+
+.btnItemRmv button {
+  border: none;
+  background-color: transparent;
+  justify-content: center;
+}
+
+.btnItemRmv button:hover {
+  cursor: pointer;
+}
+
+.btnItemRmv button:hover svg {
+  fill: red;
+}
+
+.cartFinal {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cartFinal p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.btnEmptyCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.btnEmptyCart:hover {
+  cursor: pointer;
+}
+
+.btnEmptyCart:hover svg {
+  fill: red;
+}
+
+.emptyCartIcon {
+  width: 50px;
+  height: 50px;
+}
