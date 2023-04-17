@@ -66,8 +66,8 @@ const ItemDetail = ({ detalleProducto }) => {
           color="primary"
           variant="contained"
           sx={{ margin: "0 auto", p: "15px" }}
-          onClick={() => {
-            manejarCompra();
+          onClick={(e) => {
+            manejarCompra(e);
           }}
         >
           Agregar al carrito

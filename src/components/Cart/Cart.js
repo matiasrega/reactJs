@@ -30,8 +30,8 @@ const Cart = () => {
     <div>
       <h1>Carrito ({cartItems.length})</h1>
       <ul>
-        {items.map((item) => (
-          <li key={item.id} className="cart-item">
+        {items.map((item, index) => (
+          <li key={index} className="cart-item">
             <img src={item.imagen} alt={item.nombre} />
             <div className="cartItemInfo">
               <div className="cartIteName">
