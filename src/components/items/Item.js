@@ -10,6 +10,7 @@ import {
 import "./Item.css";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext";
+import toastBuy from "../toastBuy/toastBuy";
 
 const Item = ({ producto }) => {
   const { addToCart } = useCart();
@@ -18,7 +19,7 @@ const Item = ({ producto }) => {
 
   const manejarCompra = (e) => {
     addToCart(producto);
-    navegar("/cart");
+    toastBuy();
     console.log(e.target.data);
   };
 

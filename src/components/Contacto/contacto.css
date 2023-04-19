@@ -45,3 +45,8 @@
 .textArea {
   height: 200px;
 }
+
+.my-custom-alert .swal-footer {
+  margin: 0 auto;
+  text-align: center;
+}

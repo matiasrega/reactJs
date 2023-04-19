@@ -11,6 +11,7 @@ import {
 import "./ItemDetail.css";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext";
+import toastBuy from "../toastBuy/toastBuy";
 
 const ItemDetail = ({ detalleProducto }) => {
   const navegar = useNavigate();
@@ -18,10 +19,11 @@ const ItemDetail = ({ detalleProducto }) => {
 
   const manejarCompra = (e) => {
     addToCart(detalleProducto);
-    navegar("/cart");
+    toastBuy().then(() => {
+      navegar("/cart");
+    });
     console.log(e.target.data);
   };
-
   return (
     <Card className="CardItemDetail" sx={{ maxWidth: 500 }}>
       <CardActionArea>

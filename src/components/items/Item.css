@@ -8,3 +8,18 @@
 .itemCard:hover {
   transform: scale(1.1);
 }
+
+.mi-notificacion {
+  color: white;
+  border-radius: 50px;
+}
+
+.mi-notificacion .swal-title {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+
+.mi-notificacion .swal-icon {
+  align-items: center;
+}
