@@ -178,3 +178,5 @@ const getProduct = () => {
 };
 
 export default getProduct;
+
+export { productos };
