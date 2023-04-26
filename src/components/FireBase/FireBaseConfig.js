@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { productos } from "../ApiFake/data";
+import { getFirestore /*collection, addDoc*/ } from "firebase/firestore";
+/*import { productos } from "../../ApiFake/data"; ---> se comenta ya que ya se han subido los archivos a FB*/
 
 const firebaseConfig = {
   apiKey: "AIzaSyDa20TbC_5qnSuVCc7SKKXeFZXx5i2u0LE",
@@ -14,11 +14,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
 
-const db = getFirestore();
-
-const productosCollection = collection(db, "productos");
-
+// Creando los productos desde ApiFake/Data.JS
+/*const productosCollection = collection(db, "productos");
 productos.forEach(async (producto) => {
   await addDoc(productosCollection, producto);
-});
+}); ---> funcion deshabilitada ya que se hizo la carga inicial a firebase.*/

@@ -11,6 +11,10 @@ import "./Item.css";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext";
 import toastBuy from "../toastBuy/toastBuy";
+/*import { db } from "../FireBase/FireBaseConfig";
+import { collection, query, getDocs } from "firebase/firestore";
+
+const q = query(collection(db, "productos"));*/
 
 const Item = ({ producto }) => {
   const { addToCart } = useCart();
@@ -20,14 +24,14 @@ const Item = ({ producto }) => {
   const manejarCompra = (e) => {
     addToCart(producto);
     toastBuy();
-    console.log(e.target.data);
+    console.log(e.target.id);
   };
 
   const { id, nombre, tipoDeProducto, presentacion, importe, imagen } =
     producto;
 
   return (
-    <Card className="itemCard" sx={{ width: 250 }}>
+    <Card className="itemCard" sx={{ width: 300, height: 400 }}>
       <CardMedia
         component="img"
         alt={nombre}

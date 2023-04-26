@@ -1,6 +1,6 @@
 .itemCard {
   width: 300px;
-  height: fit-content;
+  height: max-content;
   object-fit: cover;
   transition: transform 0.2s ease-in-out;
 }
