@@ -58,20 +58,19 @@ const ItemListContainer = () => {
   const [listaProductos, setListaProductos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { category } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     setIsLoading(true);
 
     const obtenerProductos = async () => {
       try {
-        category && obtenerProductos(); //usar operador ternario
-        const q = query(
-          collection(db, "productos"),
-          where("category", "==", category)
-        );
+        const q = id
+          ? query(collection(db, "productos"), where("category", "==", id))
+          : collection(db, "productos");
+
         const querySnapshot = await getDocs(q);
-        const docs = querySnapshot.map((doc) => ({
+        const docs = querySnapshot.docs.map((doc) => ({
           ...doc.data(),
           id: doc.id,
         })); //usar map en vez de forEach
@@ -85,7 +84,7 @@ const ItemListContainer = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 1000);
-  }, [category]);
+  }, [id]);
 
   return (
     <div>
