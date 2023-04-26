@@ -11,10 +11,6 @@ import "./Item.css";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../CartContext/CartContext";
 import toastBuy from "../toastBuy/toastBuy";
-/*import { db } from "../FireBase/FireBaseConfig";
-import { collection, query, getDocs } from "firebase/firestore";
-
-const q = query(collection(db, "productos"));*/
 
 const Item = ({ producto }) => {
   const { addToCart } = useCart();

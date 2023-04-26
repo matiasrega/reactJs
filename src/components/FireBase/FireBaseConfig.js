@@ -1,7 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore /*collection, addDoc*/ } from "firebase/firestore";
-/*import { productos } from "../../ApiFake/data"; //---> se comenta ya que ya se han subido los archivos a FB
+import { getFirestore /*, collection, addDoc*/ } from "firebase/firestore";
+/*import { productos } from "../../ApiFake/data"; */ //---> se comenta ya que ya se han subido los archivos a FB
 
+//Firebase V1
 /*const firebaseConfig = {
   apiKey: "AIzaSyDa20TbC_5qnSuVCc7SKKXeFZXx5i2u0LE",
   authDomain: "triquetafungiecommercereactjs.firebaseapp.com",
@@ -12,13 +13,14 @@ import { getFirestore /*collection, addDoc*/ } from "firebase/firestore";
   measurementId: "G-8ZPEEWLZDX",
 };*/
 
+//FireBase V2
 const firebaseConfig = {
-  apiKey: "AIzaSyAj0OStkZKt7l7IvijVLc0zMVWD6Pb6oUs",
-  authDomain: "triquetafungireactjs.firebaseapp.com",
-  projectId: "triquetafungireactjs",
-  storageBucket: "triquetafungireactjs.appspot.com",
-  messagingSenderId: "943122360415",
-  appId: "1:943122360415:web:9c0046432767d323e493ea",
+  apiKey: "AIzaSyCPqoQAHUDE5QQXpxSSl2HoP0iCjD5QOtw",
+  authDomain: "triquetafungireactjs-1d5fe.firebaseapp.com",
+  projectId: "triquetafungireactjs-1d5fe",
+  storageBucket: "triquetafungireactjs-1d5fe.appspot.com",
+  messagingSenderId: "201348541276",
+  appId: "1:201348541276:web:5b0eb83822c2a6df8f2f99",
 };
 
 // Initialize Firebase

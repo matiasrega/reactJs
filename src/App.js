@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./components/FireBase/FireBaseConfig";
+//import "./components/FireBase/FireBaseConfig";
 
 //Components
 import NavBar from "./components/NavBar/NavBar";

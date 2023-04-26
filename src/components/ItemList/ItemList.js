@@ -1,5 +1,19 @@
 import Item from "../items/Item";
 import "./ItemList.css";
+
+const ItemList = ({ listaProductos }) => {
+  return (
+    <div className="bodyItemList">
+      {listaProductos.map((producto) => (
+        <Item key={producto.id} producto={producto} />
+      ))}
+    </div>
+  );
+};
+export default ItemList;
+
+/*import Item from "../items/Item";
+import "./ItemList.css";
 import { db } from "../FireBase/FireBaseConfig";
 import { collection, query, getDocs } from "firebase/firestore";
 import { useState, useEffect } from "react";
@@ -14,17 +28,15 @@ const ItemList = () => {
       const docs = [];
       const querySnapshot = await getDocs(q);
       querySnapshot.forEach((doc) => {
-        // console.log('DATA:', doc.data(), 'ID:', doc.id);
         docs.push({ ...doc.data(), id: doc.id });
       });
-      //console.log(docs);
       setProductos(docs);
     };
     obtenerProductos();
   }, [q]);
   return (
     <div className="bodyItemList">
-      {productos.map((producto) => (
+      {listaProductos.map((producto) => (
         <Item key={producto.id} producto={producto} />
       ))}
     </div>
