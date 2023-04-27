@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# ReactJs
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un proyecto de aplicación web que usa ReactJS, para un ecommerce de venta de productos derivados del reino fungi.
 
-## Available Scripts
+## Instalación
 
-In the project directory, you can run:
+Para instalar las dependencias del proyecto, ejecuta el siguiente comando en la terminal:
 
-### `npm start`
+```bash
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Uso
+Para iniciar la aplicación en modo de desarrollo, ejecuta el siguiente comando en la terminal:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm start
+Esto abrirá una ventana del navegador con la dirección http://localhost:3000.
 
-### `npm test`
+Para construir la aplicación para producción, ejecuta el siguiente comando en la terminal:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm run build
+Esto creará una carpeta llamada build con los archivos estáticos de la aplicación.
 
-### `npm run build`
+Librerías
+Este proyecto usa las siguientes librerías:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React: una biblioteca de JavaScript para crear interfaces de usuario. https://reactjs.org/
+React Router: una librería para manejar el enrutamiento en aplicaciones web de una sola página. https://reactrouter.com/
+Font Awesome: una librería de iconos vectoriales. https://fontawesome.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Sweetalert: una librería para crear alertas personalizadas y atractivas con animaciones y estilos. Reemplaza las ventanas emergentes nativas del navegador por unas más elegantes y fáciles de usar3.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Frameworks
+Este proyecto utiliza los siguientes frameworks:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Material UI: un framework de componentes de React basado en los principios de diseño de Material Design. Ofrece una gran variedad de componentes de interfaz listos para usar, como botones, menús, tarjetas, iconos, etc4.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Plataformas
+Este proyecto utiliza las siguientes plataformas:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Firebase: una plataforma de desarrollo de aplicaciones web y móviles que ofrece servicios como autenticación, base de datos en tiempo real, almacenamiento en la nube, hosting, funciones en la nube, etc. Permite crear aplicaciones escalables y seguras sin tener que gestionar la infraestructura.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+Contribución
+Las contribuciones son bienvenidas. Si quieres hacer algún cambio o mejora en el código, por favor haz un fork del repositorio y crea una pull request.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Licencia
+Este proyecto está bajo la licencia de Matias Rega.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
