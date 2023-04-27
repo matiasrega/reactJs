@@ -22,7 +22,7 @@ const ItemDetail = ({ detalleProducto }) => {
     toastBuy().then(() => {
       navegar("/cart");
     });
-    console.log(e.target.data);
+    console.log(e.target.id);
   };
   return (
     <Card className="CardItemDetail" sx={{ maxWidth: 500 }}>
@@ -30,7 +30,7 @@ const ItemDetail = ({ detalleProducto }) => {
         <CardMedia
           component="img"
           height={"max-content"}
-          image={detalleProducto.imagen}
+          image={detalleProducto.imagenFungi}
           width={"max-content"}
           alt={detalleProducto.tipoDeProducto}
         />

@@ -20,7 +20,7 @@ const Item = ({ producto }) => {
   const manejarCompra = (e) => {
     addToCart(producto);
     toastBuy();
-    console.log(e.target.id);
+    //console.log(e.target.id);
   };
 
   const { id, nombre, tipoDeProducto, presentacion, importe, imagen } =
